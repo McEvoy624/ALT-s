@@ -5,26 +5,29 @@ print('Cullen and McEvoy Financial Services \nWhen the unexpected happens, we’
 name = input('Name: ')
 car_value = int(input('Car Value: '))
 nplate = input('Do you have the cars Registartion number ?(y/n): ')
+reg = ''
 if nplate == 'y':
     reg = input('Registration Number: ')
 else :
-    reg = ('No worries')
+    reg = 'No regestration given'
 
-license = input('Do you have a Full Irish License(y,n): ')
-drive_exp = input('Have you been driving longer than 1 year(y/n): ')
-claims = input('Have you had any claims in the last 5 years regardless of blame(y,n): ')
+licence = input('Do you have a Full Irish License(y,n): ')
+drive_exp = int(input('How long have you been driving: '))
+claims = input('Have you had any claims in the last 5 years regardless of blame(y/n): ')
 penalty_p = int(input('How many penalty points do you have: '))
 age = int(input('Age: '))
 
 # Loading     basic premium(car) * loading
 
 car = car_value / 1000
-basic_premium = 15 * car_value
+basic_premium = 15 * car
 lic_load = 0
 load_drive = 0
 load_age = 0
 load_pen = 0
 load_claims = 0
+
+# Variables affecting loading charged
 
 if licence == 'y':
     lic_load = 0
@@ -38,7 +41,7 @@ elif drive_exp <2:
 else:
     load_drive = 0
     
-if claims = 'y':
+if claims == 'y':
     load_claims = 10
 else :
     load_claims = 0
@@ -57,3 +60,9 @@ else :
 
 total_loading = lic_load + load_drive + load_claims + load_pen + load_age
 total_premium = basic_premium * total_loading
+
+# Final Quote
+
+print('Quote\n')
+print(name,'\n',reg,'\n',)
+print('\n€',total_premium)
