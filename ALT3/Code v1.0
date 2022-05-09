@@ -1,0 +1,27 @@
+# Insurance Quote
+
+print('Cullen and McEvoy Financial Services \nWhen the unexpected happens, we’ll be there to look after everything so you can focus on what matters.')
+
+name = input('Name: ')
+car_value = int(input('Car Value: '))
+nplate = input('Do you have the cars Registartion number ?(y/n): ')
+if nplate == 'y':
+    reg = input('Registration Number: ')
+else :
+    reg = ('No worries')
+
+license = input('Do you have a Full Irish License(y,n): ')
+drive_exp = input('Have you been driving longer than 1 year(y/n): ')
+claims = input('Have you had any recent claims: ')
+penalty_p = int(input('How many penalty points do you have: '))
+age = int(input('Age: '))
+
+# Loading     basic premium(car) * loading
+basic_premium = 15
+car = car_value / 1000
+lic_load = 0
+if licence == 'y':
+    lic_load = 1
+else :
+    lic_load = 2.5
+if drive
