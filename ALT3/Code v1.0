@@ -20,7 +20,7 @@ age = int(input('Age: '))
 # Loading     basic premium(car) * loading
 
 car = car_value / 1000
-basic_premium = 15 * car
+basic_premium = 30 * car
 lic_load = 0
 load_drive = 0
 load_age = 0
@@ -56,13 +56,17 @@ else :
 if age < 20:
     load_age = 2
 else :
-    load_age = 1
+    load_age = 0
 
-total_loading = lic_load + load_drive + load_claims + load_pen + load_age
+total_loading = lic_load + load_drive + load_claims + load_pen + load_age + 1
 total_premium = basic_premium * total_loading
 
 # Final Quote
 
+# print(total_loading)
+# print(basic_premium) # Just for testing
+
 print('Quote\n')
-print(name,'\n',reg,'\n',)
+print(name)
+print(reg)
 print('\n€',total_premium)
