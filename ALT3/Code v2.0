@@ -1,7 +1,7 @@
 # Insurance Quote
 
 print('Cullen and McEvoy Financial Services \nWhen the unexpected happens, we’ll be there to look after everything so you can focus on what matters.')
-call = input('Which Quote would you like: /n1. Car Quote')
+call = input('Would you like a car quote ?(y/n): ')
 def car_quote() :
     name = input('Name: ')
     car_value = int(input('Car Value: '))
@@ -16,7 +16,7 @@ def car_quote() :
 
     licence = input('Do you have a Full Irish License(y,n): ')
     drive_exp = int(input('How long have you been driving: '))
-    claims = input('Have you had any claims in the last 5 years7 regardless of blame(y/n): ')
+    claims = input('Have you had any claims in the last 5 years regardless of blame(y/n): ')
     penalty_p = int(input('How many penalty points do you have: '))
     age = int(input('Age: '))
 
@@ -74,4 +74,5 @@ def car_quote() :
     print(reg)
     print('\n€',total_premium)
     
-car_quote()
+if call == 'y':
+    car_quote()
